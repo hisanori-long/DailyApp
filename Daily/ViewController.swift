@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    func storeDaily(content: String) {
+        let date = Date()
+        let df = DateFormatter()
+        
+        df.dateFormat = "yyyy/MM/dd"
+        
+        UserDefaults.standard.set(content, forKey: df.string(from: date))
+    }
 
 }
 
